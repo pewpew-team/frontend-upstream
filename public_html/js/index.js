@@ -1,34 +1,51 @@
 var $page = $('#page')
 
 function showScoreboardScreen() {
-	// TODO
+    hideMainScreen();
+    $page.html(scoreboardTmpl());
+    $page.find('.js-back').on('click', function () {
+        hideScoreboardScreen();
+        showMainScreen();
+    });
 }
 function hideScoreboardScreen() {
-	// TODO
+	$page.find('.js-back').off('click', '**');
 }
 
 function showGameScreen() {
-	// TODO
+    hideMainScreen();
+    $page.html(gameTmpl());
+    $page.find('.js-exit').on('click', function () {
+        hideGameScreen();
+        showMainScreen();
+    });
 }
 function hideGameScreen() {
-	// TODO
+    $page.find('.js-exit').off('click','**');
 }
 
 function showLoginScreen() {
-	// TODO
+    hideMainScreen();
+    $page.html(loginTmpl());
+    $page.find('.js-back').on('click', function () {
+        hideLoginScreen();
+        showMainScreen();
+    });
 }
 function hideLoginScreen() {
-	// TODO
+    $page.find('.js-back').off('click', '**');
 }
 
 function showMainScreen() {
     $page.html(mainTmpl());
     $page.find('.js-scoreboard').on('click', showScoreboardScreen);
-    $page.find('.js-start-game').on('click', showGameScreen);
+    $page.find('.js-game').on('click', showGameScreen);
     $page.find('.js-login').on('click', showLoginScreen);
 }
 
 function hideMainScreen() {
-	// TODO
+    $page.find('.js-scoreboard').off('click', '**');
+    $page.find('.js-start-game').off('click', '**');
+    $page.find('.js-login').off('click', '**');
 }
 
