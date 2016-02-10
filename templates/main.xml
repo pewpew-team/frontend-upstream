@@ -1,3 +1,16 @@
 <fest:template xmlns:fest="http://fest.mail.ru">
-    <div id="main"></div>
+    <div id="main" class = 'menu container'>
+        <div class = "menu__header">
+            EPIC
+        </div>
+        <button class="menu__btn js-game">
+            Game
+        </button>
+        <button class="menu__btn js-login">
+            Login
+        </button>
+        <button class="menu__btn js-scoreboard">
+            Scoreboard
+        </button>
+    </div>
 </fest:template>

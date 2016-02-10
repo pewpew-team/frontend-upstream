@@ -1,1 +1,36 @@
-/* TODO */
+body {
+    background-image: url(../bg-examples/pixel-bg.png);
+}
+
+.menu.container {
+    display: table;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+    min-width: 500px;
+    background-image: url(../bg-examples/pixel-menu-bg.png);
+    width: 30%;
+    border-radius: 5px;
+}
+.menu__btn {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #eea236;
+    display: block;
+    border: transparent;
+    border-radius: 10px;
+}
+
+.menu__header {
+    font-size: 100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 55%;
+    text-align: center;
+}

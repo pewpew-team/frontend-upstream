@@ -1,3 +1,5 @@
+var $page = $('#page')
+
 function showScoreboardScreen() {
 	// TODO
 }
@@ -20,7 +22,10 @@ function hideLoginScreen() {
 }
 
 function showMainScreen() {
-	// TODO
+    $page.html(mainTmpl());
+    $page.find('.js-scoreboard').on('click', showScoreboardScreen);
+    $page.find('.js-start-game').on('click', showGameScreen);
+    $page.find('.js-login').on('click', showLoginScreen);
 }
 
 function hideMainScreen() {
